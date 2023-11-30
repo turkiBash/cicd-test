@@ -68,10 +68,14 @@ jobs:
       # Execute IssueOps branch deployment logic, hooray!
       # This will be used to "gate" all future steps below and conditionally trigger steps/deployments
       - name: branch-deploy
-        uses: github/branch-deploy@v8.1.1
         id: branch-deploy
+        uses: github/branch-deploy@v8.1.1
         with:
           trigger: '.deploy'
+          noop_trigger: '.noop'
+          reaction: 'eyes'
+          environment: 'production'
+          stable_branch: 'main'
 
       # Run your deployment logic for your project here - examples seen below
 
