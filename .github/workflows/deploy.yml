@@ -8,8 +8,8 @@ jobs:
   build-push-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: branch-deploy
-        id: branch-deploy
+    - name: deploy
+        id: branch-deploygit
         uses: github/branch-deploy@v8.0.0
 
       - name: Check Out Repo
