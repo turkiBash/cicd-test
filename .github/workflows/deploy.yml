@@ -108,6 +108,6 @@ jobs:
           script: |
             echo ${{ secrets.GHCR_PAT }} | docker login ghcr.io -u ${{ secrets.GHCR_USERNAME }} --password-stdin
             docker pull ghcr.io/${{ github.repository }}/cicd-test:v1
-            docker stop cicd-test || true
-            docker rm cicd-test || true
+            docker stop cicd-linode || true
+            docker rm cicd-linode || true
             docker run -d --name cicd-test -p 2000:2000 ghcr.io/${{ github.repository }}/cicd-test:v1
