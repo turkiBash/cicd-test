@@ -8,9 +8,9 @@ jobs:
   build-push-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: deploy
-      id: branch-deploygit
-      uses: github/branch-deploy@v8.0.0
+      - name: deploy
+        id: branch-deploygit
+        uses: github/branch-deploy@v8.0.0
 
       - name: Check Out Repo
         if: ${{ steps.branch-deploy.outputs.continue == 'true' }}
@@ -45,4 +45,3 @@ jobs:
             docker stop cicd-test || true
             docker rm cicd-test || true
             docker run -d --name cicd-test -p 2000:2000 ghcr.io/${{ github.repository }}/cicd-test:v1
-
