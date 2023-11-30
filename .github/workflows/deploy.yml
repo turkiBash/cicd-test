@@ -9,11 +9,11 @@ job:
     runs-on: ubuntu-latest
     steps:
       - name: branch-deploy
-      id: branch-deploy
-      uses: github/branch-deploy@v8.1.1
-      with:
-        trigger: '.deploy'
-        noop_trigger: '.noop'
-        reaction: 'eyes'
-        environment: 'production'
-        stable_branch: 'main'
+        id: branch-deploy
+        uses: github/branch-deploy@v8.1.1
+        with:
+          trigger: '.deploy'
+          noop_trigger: '.noop'
+          reaction: 'eyes'
+          environment: 'production'
+          stable_branch: 'main'
