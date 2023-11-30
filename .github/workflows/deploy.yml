@@ -1,0 +1,10 @@
+name: deploy-test
+  on:
+    branches: [main]
+
+job:
+  push-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      id: branch-deploy
+      uses: github/branch-deploy@v8.1.1
