@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: deploy
-        id: branch-deploy
+        id: branch-deploygit
         uses: github/branch-deploy@v8.0.0
 
       - name: Check Out Repo
